@@ -1,0 +1,8 @@
+/* Import Swiper core styles */
+@import 'swiper/css';
+
+/* Import additional styles for pagination (if you're using pagination) */
+@import 'swiper/css/pagination';
+
+/* Optional: Import styles for autoplay functionality (if you're using autoplay) */
+@import 'swiper/css/autoplay';
