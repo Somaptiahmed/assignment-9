@@ -26,7 +26,7 @@ const LoadData = () => {
             <h1 className="text-3xl font-bold text-center text-blue-800 mb-5">
                 Mountain Treks
             </h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {treks.map((trek) => (
                     <div key={trek.ID} className="border rounded-lg shadow-md p-5 bg-white">
                         <h2 className="text-xl font-bold text-blue-700">

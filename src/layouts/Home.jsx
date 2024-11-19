@@ -35,40 +35,47 @@
 // export default HomeLayout;
 
 
+
+
+
+
+
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import Banner from "../components/Banner";
 import LoadData from "../components/LoadData";
+import Animation from "../components/Animation";
 import Footer from "../components/Footer";
-import "animate.css";
 
-const HomeLayout = () => {
+const Home = () => {
   return (
     <div className="font-poppins">
       <header className="py-10 sticky top-0 z-50 bg-white">
-        <Header></Header>
+        <Header />
       </header>
-      <nav className="w-11/12 mx-auto py-2 ">
-        <Navbar></Navbar>
+      <nav className="w-11/12 mx-auto py-2">
+        <Navbar />
       </nav>
-      <main className="w-11/12 mx-auto pt-5 ">
-        <Banner></Banner>
+      <main className="w-11/12 mx-auto pt-5">
+       
+        <Banner />
         
-        {/* Applying Animate.css to LoadData */}
-        <section className="animate__animated animate__fadeIn animate__delay-1s">
-          <LoadData></LoadData>
-        </section>
         
-        <section className="">
-          <Outlet></Outlet>
+        <Animation></Animation>
+        
+       <section className="w-11/12 mx-auto pt-5">
+       <LoadData />
+       </section>
+        <section >
+          <Outlet />
         </section>
       </main>
-      <footer className="pt-5 ">
-        <Footer></Footer>
+      <footer className="pt-5">
+        <Footer />
       </footer>
     </div>
   );
 };
 
-export default HomeLayout;
+export default Home;
