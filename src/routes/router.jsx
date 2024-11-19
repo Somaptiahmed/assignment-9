@@ -118,6 +118,7 @@ const router = createBrowserRouter([
         path: "expert",
         element: <Expert />,
       },
+      
     ],
   },
   {
@@ -132,6 +133,7 @@ const router = createBrowserRouter([
     path: "update",
     element: <UpdateProfile />,
   },
+  
 ]);
 
 export default router;

@@ -114,7 +114,7 @@ const UpdateProfile = () => {
   };
 
   return (
-    <div className="min-h-screen mt-20 mx-auto">
+    <div className="min-h-screen w-11/12 mt-20 mx-auto">
       <Navbar />
       <div className="flex justify-center items-center">
         <div className="card bg-base-100 w-full max-w-lg shrink-0 rounded-none p-10">
