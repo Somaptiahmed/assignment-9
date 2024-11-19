@@ -180,7 +180,7 @@ const Register = () => {
   const [errors, setErrors] = useState({});
   const [password, setPassword] = useState("");
 
-  // Password validation logic
+  
   const validatePassword = (password) => {
     const newErrors = {};
 
@@ -201,7 +201,7 @@ const Register = () => {
     const newPassword = e.target.value;
     setPassword(newPassword);
 
-    // Validate password and update errors
+    
     const validationErrors = validatePassword(newPassword);
     setErrors((prevErrors) => ({ ...prevErrors, ...validationErrors }));
   };
@@ -215,7 +215,7 @@ const Register = () => {
     const photo = form.get("photo");
     const password = form.get("password");
 
-    // Validate name
+    
     if (name.length < 5) {
       setErrors((prevErrors) => ({
         ...prevErrors,
@@ -229,7 +229,7 @@ const Register = () => {
       const user = result.user;
       setUser(user);
 
-      // Update user profile
+      
       await updateUserProfile({ displayName: name, photoURL: photo });
       alert("Registration successful!");
       navigate("/");
@@ -294,7 +294,7 @@ const Register = () => {
             />
           </div>
 
-          {/* Password Input */}
+          
           <div className="form-control">
             <label className="label">
               <span className="label-text">Password</span>
@@ -308,7 +308,7 @@ const Register = () => {
               onChange={handlePasswordChange}
               required
             />
-            {/* Password Errors */}
+            
             {Object.values(errors)
               .filter((err) => err.startsWith("• Password"))
               .map((err, index) => (
@@ -318,19 +318,19 @@ const Register = () => {
               ))}
           </div>
 
-          {/* Submit Button */}
+         
           <div className="form-control mt-6">
             <button className="btn btn-neutral rounded-none">Register</button>
           </div>
         </form>
 
-        {/* Google Login */}
+        
         <div className="divider mt-6">OR</div>
         <div className="form-control">
           <button className="btn btn-outline w-full">Continue with Google</button>
         </div>
 
-        {/* Login Link */}
+        
         <p className="text-center font-semibold mt-4">
           Already Have An Account?{" "}
           <Link className="text-red-500" to="/auth/login">
