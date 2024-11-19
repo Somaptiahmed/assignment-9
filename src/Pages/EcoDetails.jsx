@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 
 // Fetch trek data from Mountain_Treks.json
@@ -46,9 +47,11 @@ const EcoDetails = () => {
   }
 
   return (
-   
-
-<div className="my-11 w-9/12 mx-auto">
+    <div>
+      <div className='w-11/12 my-20 mx-auto'>
+        <Navbar></Navbar>
+      </div>
+      <div className="my-11 w-9/12 mx-auto">
       <h1 className="text-3xl font-bold text-center text-blue-800 mb-5">{trekDetails.AdventureTitle}</h1>
       <img
         src={trekDetails.Image}
@@ -104,8 +107,9 @@ const EcoDetails = () => {
             Talk with Expert
           </Link>
     </div>
-    
-  );
+    </div>
+   
+    );
 };
 
 export default EcoDetails;

@@ -101,6 +101,7 @@
 
 
 import React, { useState, useEffect } from "react";
+import Navbar from "../components/Navbar";
 
 const Expert = () => {
     const [showModal, setShowModal] = useState(false);
@@ -131,7 +132,8 @@ const Expert = () => {
     }, []);
 
     return (
-        <div className="min-h-screen mx-auto text-center">
+        <div>
+            <div className="min-h-screen mx-auto text-center">
             {/* Welcome Text with Animation */}
             <div className="my-20">
             <h1
@@ -230,6 +232,7 @@ const Expert = () => {
                     animation: welcomeAnimation 1s ease-out forwards;
                 }
             `}</style>
+        </div>
         </div>
     );
 };
