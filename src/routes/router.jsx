@@ -79,6 +79,7 @@ import ErrorPage from "../Pages/ErrorPage"; // Import ErrorPage
 import MyProfile from "../layouts/MyProfile";
 import UpdateProfile from "../layouts/UpadateProfile";
 import ForgotPassword from "../Pages/ForgotPassword";
+import Facebook from "../Pages/Facebook";
 
 const router = createBrowserRouter([
   {
@@ -104,6 +105,10 @@ const router = createBrowserRouter([
       {
         path: "register",
         element: <Register />,
+      },
+      {
+        path: "facebook",
+        element: <Facebook></Facebook>,
       },
       {
         path: "forgot-password",
